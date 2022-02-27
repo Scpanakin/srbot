@@ -5,7 +5,9 @@ var Discord = require('discord.io');
 
 var logger = require('winston');
 
-var auth = require('./auth.json');
+// var auth = require('./auth.json');
+
+require("dotenv").config();
 
 // Configure logger settings
 
@@ -22,9 +24,11 @@ logger.level = 'debug';
 
 var bot = new Discord.Client({
 
-token: auth.token,
+token: process.env.BOT_TOKEN,
 
-autorun: true
+autorun: true,
+
+id: 942943031999496192
 
 });
 
@@ -65,7 +69,6 @@ class owUser{
 }
 const platform = 'pc';
 var currUser;
-const re = new RegExp('hero\w*')
 
 bot.on('message', function (user, userID, channelID, message, evt) {
 

@@ -6,6 +6,7 @@
     "author": "Shanti Patel",
     "dependencies": {
         "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+        "dotenv": "^16.0.0",
         "mongodb": "^4.4.0",
         "overwatch-api": "^0.10.4",
         "overwatch-stats-api": "^2.1.0",
